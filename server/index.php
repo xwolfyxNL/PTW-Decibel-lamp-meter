@@ -6,10 +6,21 @@
     //insert into database and reload page
     if(isset($_POST['save']))
     {
-      	$sql0 = "INSERT INTO profiles (name, minimum, maximum);
-      	VALUES ('".$_POST["profilename"]."','".$_POST["minimum"]."','".$_POST["maximum"]."')";
-     	$result = mysqli_query($conn,$sql0);
-	    header("Refresh:0");
+        $checkresult = mysql_query("SELECT * FROM table1 WHERE something");
+        $num_rows = mysql_num_rows($checkresult);
+        if($checkresult>0)
+        {
+            echo '<script language="javascript">';
+            echo 'alert("Profile already exists!")';
+            echo '</script>';
+        }
+        else
+        {
+      	    $sql0 = "INSERT INTO profiles (name, minimum, maximum);
+      	    VALUES ('".$_POST["profilename"]."','".$_POST["minimum"]."','".$_POST["maximum"]."')";
+     	    $result = mysqli_query($conn,$sql0);
+	        header("Refresh:0");
+	    }
     }
     //delete from database and reload page
     if(isset($_POST['delete']) && $_POST['profiles'] != 'current' && $_POST['profiles'] != 'default')
