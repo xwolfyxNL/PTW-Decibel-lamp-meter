@@ -1,3 +1,5 @@
+# needs to be placed in ~/.asoundrc after that reboot the pi
+
 # create a virtual four-channel device with two sound devices:
 # This is in fact two interleaved stereo streams in
 # different memory locations, so JACK will complain that it

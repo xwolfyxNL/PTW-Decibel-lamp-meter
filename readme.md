@@ -7,12 +7,12 @@ These values that trigger the certain lights can be controlled from a web panel.
 
 #### Software dependencies:
 
-Server:
+##### Server:
 - MySQL server
 - PHP
 - Apache
 
-Client:
+##### Client:
 - MySQL client
 - PyAudio
 - Numpy
@@ -31,13 +31,15 @@ GPIO pins: (this can be changed in the: /client/modules/gpio.py
 
 #### Required IP configurations of the raspberry pi's
 
-Client IP:
+##### Client IP:
 192.168.50.101
 netmask 255.255.255.0
 
-Server IP:
+##### Server IP:
 192.168.50.100
 netmask 255.255.255.0
+
+#### File placement on both the raspberry pi's
 
 ##### Client side:
 
@@ -46,6 +48,7 @@ Use all the files from the client folder.
 Place the py files (except the .asoundrc file) where ever you want, as long as you have read/write permission.
 
 The asound.rc file needs to be placed in the ~/ folder and needs to overwrite the existing one (if it already exists). This will merge multiple microphone sounds cards in to one, as linux can't control multiple sounds cards at the same time.
+When that's done reboot the Raspberry PI.
 
 ##### Server side:
 
@@ -57,4 +60,4 @@ The database.sql needs to be imported in to the database server and the database
 
 The database.sql contains the database structure and some default profiles.
 
-Credits: Stefan, Max, Dorien, Thijs, Lucas
+##### Credits: Stefan, Max, Dorien, Thijs, Lucas
