@@ -19,3 +19,17 @@ GPIO.setup(GREEN,GPIO.OUT)
 GPIO.output(RED, 0)
 GPIO.output(YELLOW, 0)
 GPIO.output(GREEN, 0)
+
+# Make functions for green, yellow and green light
+def green():
+        GPIO.output(GREEN, 1)
+        GPIO.output(YELLOW, 0)
+        GPIO.output(RED, 0)
+def yellow():
+        GPIO.output(GREEN, 0)
+        GPIO.output(YELLOW, 1)
+        GPIO.output(RED, 0)
+def red():
+        GPIO.output(GREEN, 0)
+        GPIO.output(YELLOW, 0)
+        GPIO.output(RED, 1)
