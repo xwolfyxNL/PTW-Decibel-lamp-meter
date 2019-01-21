@@ -8,7 +8,7 @@ from includes.microphone import *
 print ("Loaded profile information:\nName: " + profilename + "\ndB min: " + str(dbmin) + "\ndB max: " + str(
     dbmax) + "\n")
 
-# Lights
+# Light control
 while True:
 
     result = dbValue()  # Fetch the average dB value from the readAudio() function
