@@ -3,6 +3,8 @@
     $database = "lampapplication";
     $table = "profiles";
     include $_SERVER['DOCUMENT_ROOT'].'/modules/database.php'
+?>
+<?php
     //insert into database and reload page
     if(isset($_POST['save']))
     {
