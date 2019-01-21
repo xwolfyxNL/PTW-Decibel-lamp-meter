@@ -21,8 +21,8 @@ These values that trigger the certain lights can be controlled from a web panel.
 #### Hardware dependencies:
 - 2 raspberry pi's
 - 1 switch
-- 3 UTP cabels
-- 2 microphones (USB connections as they need to have a sound cars build in)
+- 3 UTP cables
+- 2 microphones (USB connections as they need to have a sound card build in)
 
 GPIO pins: (this can be changed in the: /client/modules/gpio.py
 - Red led = 3
