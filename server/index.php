@@ -6,7 +6,7 @@
     //insert into database and reload page
     if(isset($_POST['save']))
     {
-        $checkresult = mysql_query("SELECT * FROM table1 WHERE something");
+        $checkresult = mysql_query("SELECT * FROM profiles WHERE name = '".$_POST['profilename']."'");
         $num_rows = mysql_num_rows($checkresult);
         if($checkresult>0)
         {
