@@ -1,5 +1,3 @@
-### Control the lights with the dB value parameters from the database and the recorded dB from the 2 microphones
-
 # Prints the name and the values of the loaded profile
 print ("Loaded profile information:\nName: " + profilename + "\ndB min: " + str(dbmin) + "\ndB max: " + str(dbmax) + "\n")
 
