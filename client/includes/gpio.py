@@ -1,3 +1,6 @@
+# Imports
+import RPi.GPIO as GPIO
+
 # Enables the GPIO pins
 GPIO.setmode(GPIO.BOARD)
 GPIO.setwarnings(False)

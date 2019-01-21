@@ -1,3 +1,10 @@
+# Imports
+import time
+import os
+import pyaudio
+import audioop
+import numpy as np
+
 # Initialize audio channel for both the microphones
 pa = pyaudio.PyAudio()
 
@@ -23,3 +30,22 @@ stream2 = pa.open(format=pyaudio.paInt16,
                   input=True,
                   frames_per_buffer=128,
                   input_device_index=3)  # input_device_index specifies the device number of the microphone
+
+### Start the microphone listening
+os.system('clear') # Clear screen
+def dbValue():
+    dbList = [] # dB list
+    
+    #Microphone 1 data
+    for index in range(1000):
+        data = stream1.read(128, exception_on_overflow=False)
+        rms = audioop.rms(data,2)
+        dbList.append((20*np.log(rms)))
+
+    #Microphone 2 data
+    for index in range(1000):
+        data = stream2.read(128, exception_on_overflow=False)
+        rms = audioop.rms(data,2)
+        dbList.append((20*np.log(rms)))
+    value = int(sum(dbList)/len(dbList)) #calculate average dB based on the RMS
+    return value # return the average dB value
