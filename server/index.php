@@ -1,12 +1,12 @@
 
 <?php
-    $database = "lampapplication"
-    $table = "profiles"
+    $database = "lampapplication";
+    $table = "profiles";
     include $_SERVER['DOCUMENT_ROOT'].'/modules/database.php'
     //insert into database and reload page
     if(isset($_POST['save']))
     {
-      	$sql0 = "INSERT INTO profiles (name, minimum, maximum)
+      	$sql0 = "INSERT INTO profiles (name, minimum, maximum);
       	VALUES ('".$_POST["profilename"]."','".$_POST["minimum"]."','".$_POST["maximum"]."')";
      	$result = mysqli_query($conn,$sql0);
 	    header("Refresh:0");
@@ -41,6 +41,7 @@
 
 		//define options in drop down menu;
 		<?php
+		$column = 'name';
 		include SERVER['DOCUMENT_ROOT'].'modules/dropdown.php'
 		?>
 	</select>
