@@ -24,7 +24,7 @@ Client:
 - 3 UTP cabels
 - 2 microphones (USB connections as they need to have a sound cars build in)
 
-GPIO pins: (this can be changed in the: /client/includes/gpio.py
+GPIO pins: (this can be changed in the: /client/modules/gpio.py
 - Red led = 3
 - Yellow led = 5
 - Green led = 7
@@ -53,7 +53,7 @@ Use all the files from the server folder.
 
 Place the php files on your apache server. (/var/www/html)
 
-The database.sql needs to be imported in to the database server and the database connection settings need to be changed in the includes/database.php on the server side and the includes/database.py on the client side.
+The database.sql needs to be imported in to the database server and the database connection settings need to be changed in the modules/database.php on the server side and the modules/database.py on the client side.
 
 The database.sql contains the database structure and some default profiles.
 
