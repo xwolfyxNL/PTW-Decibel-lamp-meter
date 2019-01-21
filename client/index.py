@@ -19,4 +19,4 @@ while True:
         print("Level Yellow\ndB: " + str(result) + "\n")  # Print the level yellow and the dB value
     elif result > dbmax:  # If the result is bigger then the dbmax value, then turn the light to red
         red()
-        print("Niveau Red\ndB: " + str(result) + "\n")  # Print the level red and the dB value
+        print("Level Red\ndB: " + str(result) + "\n")  # Print the level red and the dB value
