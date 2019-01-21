@@ -49,29 +49,32 @@ if (isset($_POST['use']))
 	</select>
 	<input type = "submit" name = "delete" value = "Delete profile"/> <br><br>
 	<input type = "submit" name = "use" value = "Use this profile"/>
+	<br><br>
+
+    <!--define inputfields-->
+	Profilename: <br>
+    <input type="text" name="name">
+    <br><br>
+
+    Highest dB value: <br>
+    <input type="text" name="maximum">
+    <br><br>
+
+    Lowest dB value: <br>
+    <input type="text" name="minimum" >
+    <br><br>
+
+    <input type="submit" name = "save" value = "Save new profile"/>
+
 </form>
 
 
-<br><br>
 
 <?php
 
 ?>
 
 <form method = "post">
-Profilename: <br>
-<input type="text" name="name">
-<br><br>
-
-Highest dB value: <br>
-<input type="text" name="maximum">
-<br><br>
-
-Lowest dB value: <br>
-<input type="text" name="minimum" >
-<br><br>
-
-<input type="submit" name = "save" value = "Save new profile"/>
 
 </form>
 
