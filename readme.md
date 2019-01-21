@@ -31,13 +31,15 @@ GPIO pins: (this can be changed in the: /client/modules/gpio.py
 
 #### Required IP configurations of the raspberry pi's
 
-Client IP:
+##### Client IP:
 192.168.50.101
 netmask 255.255.255.0
 
-Server IP:
+##### Server IP:
 192.168.50.100
 netmask 255.255.255.0
+
+#### File placement on both the raspberry pi's
 
 ##### Client side:
 
@@ -58,4 +60,4 @@ The database.sql needs to be imported in to the database server and the database
 
 The database.sql contains the database structure and some default profiles.
 
-Credits: Stefan, Max, Dorien, Thijs, Lucas
+##### Credits: Stefan, Max, Dorien, Thijs, Lucas
