@@ -2,7 +2,7 @@
 <?php
     $database = "lampapplication";
     $table = "profiles";
-    include $_SERVER['DOCUMENT_ROOT'].'/modules/database.php'
+    include $_SERVER['DOCUMENT_ROOT'].'/test/modules/database.php'
 ?>
 <?php
     //insert into database and reload page
@@ -55,7 +55,7 @@
 		//define options in drop down menu;
 		<?php
 		$column = 'name';
-		include SERVER['DOCUMENT_ROOT'].'modules/dropdown.php'
+		include SERVER['DOCUMENT_ROOT'].'modules/test/dropdown.php'
 		?>
 	</select>
 	<input type = "submit" name = "delete" value = "Delete profile"/> <br>
