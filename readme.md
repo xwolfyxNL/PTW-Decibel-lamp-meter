@@ -5,7 +5,7 @@ The project uses two microphones to calculate a realtime average decibel. This d
 
 These values that trigger the certain lights can be controlled from a web panel. This web panel contains default room profiles and also allows the user to create there own. These values are stored in a remote MySQL database.
 
-####Software dependencies:
+#### Software dependencies:
 
 Server:
 - MySQL server
@@ -18,7 +18,7 @@ Client:
 - Numpy
 - Audioop
 
-####Hardware dependencies:
+#### Hardware dependencies:
 - 2 raspberry pi's
 - 1 switch
 - 3 UTP cabels
@@ -29,7 +29,7 @@ GPIO pins: (this can be changed in the: /client/includes/gpio.py
 - Yellow led = 5
 - Green led = 7
 
-####Required IP configurations of the raspberry pi's
+#### Required IP configurations of the raspberry pi's
 
 Client IP:
 192.168.50.101
@@ -39,7 +39,7 @@ Server IP:
 192.168.50.100
 netmask 255.255.255.0
 
-#####Client side:
+##### Client side:
 
 Use all the files from the client folder.
 
@@ -47,7 +47,7 @@ Place the py files (except the .asoundrc file) where ever you want, as long as y
 
 The asound.rc file needs to be placed in the ~/ folder and needs to overwrite the existing one (if it already exists). This will merge multiple microphone sounds cards in to one, as linux can't control multiple sounds cards at the same time.
 
-#####Server side:
+##### Server side:
 
 Use all the files from the server folder.
 
