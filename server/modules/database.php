@@ -8,7 +8,7 @@ if(!$conn)
 die("Connection failed: " . mysqli_connect_error());
 }
 
-$result = $conn -> query("SELECT * FROM profielen");
+$result = $conn -> query("SELECT * FROM profiles");
 
 
 ?>
