@@ -10,7 +10,6 @@ print ("Loaded profile information:\nName: " + profilename + "\ndB min: " + str(
 
 # Light control
 while True:
-
     result = dbValue()  # Fetch the average dB value from the readAudio() function
     if result < dbmin:  # If the result is smaller then the dbmin value, then turn the light to green
         green() # Calls the function for changing the light and printing the message

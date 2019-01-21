@@ -39,13 +39,13 @@ def dbValue():
     #Microphone 1 data
     for index in range(1000):
         data = stream1.read(128, exception_on_overflow=False)
-        rms = audioop.rms(data,2)
-        dbList.append((20*np.log(rms)))
+        rms = audioop.rms(data,2) #fetch the RMS value from the microphone
+        dbList.append((20*np.log(rms))) #dB calculation formula
 
     #Microphone 2 data
     for index in range(1000):
         data = stream2.read(128, exception_on_overflow=False)
-        rms = audioop.rms(data,2)
-        dbList.append((20*np.log(rms)))
+        rms = audioop.rms(data,2) #fetch the RMS value from the microphone
+        dbList.append((20*np.log(rms))) #dB calculation formula
     value = int(sum(dbList)/len(dbList)) #calculate average dB based on the RMS
     return value # return the average dB value
