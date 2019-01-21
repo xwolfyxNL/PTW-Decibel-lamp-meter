@@ -22,7 +22,7 @@ while True:
         GPIO.output(YELLOW, 1)
         GPIO.output(RED, 0)
         print("Level Yellow\ndB: " + str(result) + "\n")  # Print the level yellow and the dB value
-    else result > dbmax:  # If the result is bigger then the dbmax value, then turn the light to red
+    else:  # If the result is bigger then the dbmax value, then turn the light to red
         GPIO.output(GREEN, 0)
         GPIO.output(YELLOW, 0)
         GPIO.output(RED, 1)
