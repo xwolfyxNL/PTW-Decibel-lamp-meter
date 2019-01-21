@@ -5,7 +5,7 @@ import RPi.GPIO as GPIO
 GPIO.setmode(GPIO.BOARD)
 GPIO.setwarnings(False)
 
-# Names GPIO pins for leds
+# Names GPIO pins for the leds
 RED = 3
 YELLOW = 5
 GREEN = 7
@@ -15,12 +15,12 @@ GPIO.setup(RED,GPIO.OUT)
 GPIO.setup(YELLOW,GPIO.OUT)
 GPIO.setup(GREEN,GPIO.OUT)
 
-# Turn off all the led GPIO pins (incase they were already enabled)
+# Turn off all the led GPIO pins (in case they were already enabled)
 GPIO.output(RED, 0)
 GPIO.output(YELLOW, 0)
 GPIO.output(GREEN, 0)
 
-# Make functions for green, yellow and red light
+# Functions for turning the green, yellow and red light on or off
 def green():
         GPIO.output(GREEN, 1)
         GPIO.output(YELLOW, 0)

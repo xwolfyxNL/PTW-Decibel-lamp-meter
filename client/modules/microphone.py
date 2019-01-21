@@ -8,7 +8,7 @@ import numpy as np
 # Initialize audio channel for both the microphones
 pa = pyaudio.PyAudio()
 
-# Print microphone device id's incase of initialisation error
+# Print microphone device id's in case of a initialisation error
 info = pa.get_host_api_info_by_index(0)
 numdevices = info.get('deviceCount')
 for i in range(0, numdevices):
@@ -36,16 +36,16 @@ os.system('clear') # Clear screen
 def dbValue():
     dbList = [] # dB list
     
-    #Microphone 1 data
+    # Microphone 1 data
     for index in range(1000):
         data = stream1.read(128, exception_on_overflow=False)
-        rms = audioop.rms(data,2) #fetch the RMS value from the microphone
-        dbList.append((20*np.log(rms))) #dB calculation formula
+        rms = audioop.rms(data,2) # Fetch the RMS value from the microphone
+        dbList.append((20*np.log(rms))) # dB calculation formula
 
-    #Microphone 2 data
+    # Microphone 2 data
     for index in range(1000):
         data = stream2.read(128, exception_on_overflow=False)
-        rms = audioop.rms(data,2) #fetch the RMS value from the microphone
-        dbList.append((20*np.log(rms))) #dB calculation formula
-    value = int(sum(dbList)/len(dbList)) #calculate average dB based on the RMS
-    return value # return the average dB value
+        rms = audioop.rms(data,2) # Fetch the RMS value from the microphone
+        dbList.append((20*np.log(rms))) # dB calculation formula
+    value = int(sum(dbList)/len(dbList)) # Calculate average dB based on the RMS
+    return value # Return the average dB value

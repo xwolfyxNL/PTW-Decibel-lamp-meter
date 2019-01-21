@@ -10,7 +10,7 @@ mydb = mysql.connector.connect(
 
 # Fetch dB values from the Mysql database
 mycursor = mydb.cursor()
-mycursor.execute("SELECT * FROM profiles where name = 'current'")
+mycursor.execute("SELECT * FROM profiles where name = 'current'") # Fetches the profile that has the name 'current'
 data = mycursor.fetchall()
 for row in data:
   profilename = str(row[1])
