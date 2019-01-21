@@ -46,6 +46,7 @@ Use all the files from the client folder.
 Place the py files (except the .asoundrc file) where ever you want, as long as you have read/write permission.
 
 The asound.rc file needs to be placed in the ~/ folder and needs to overwrite the existing one (if it already exists). This will merge multiple microphone sounds cards in to one, as linux can't control multiple sounds cards at the same time.
+When that's done reboot the Raspberry PI.
 
 ##### Server side:
 
