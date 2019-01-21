@@ -1,65 +1,9 @@
-### Imports
-import RPi.GPIO as GPIO
-import pyaudio
-import audioop
-import numpy as np
-import time
-import os
-import mysql.connector
-
 ### Preparation
-# Enables the GPIO pins
-GPIO.setmode(GPIO.BOARD)
-GPIO.setwarnings(False)
-
-# Connects to the database on the other Raspberry PI
-mydb = mysql.connector.connect(
-  host="192.168.50.100",
-  user="root",
-  passwd="root",
-  database="LampAppProfiles"
-)
-
-# Names GPIO pins for leds
-RED = 3
-YELLOW = 5
-GREEN = 7
-
-# Setup the GPIO pins
-GPIO.setup(RED,GPIO.OUT)
-GPIO.setup(YELLOW,GPIO.OUT)
-GPIO.setup(GREEN,GPIO.OUT)
-
-# Turn off all the led GPIO pins (incase they were already enabled)
-GPIO.output(RED, 0)
-GPIO.output(YELLOW, 0)
-GPIO.output(GREEN, 0)
-
-# Initialize audio channel for both the microphones
-pa = pyaudio.PyAudio()
-
-# Print microphone device id's incase of initialisation error
-info = pa.get_host_api_info_by_index(0)
-numdevices = info.get('deviceCount')
-for i in range(0, numdevices):
-        if (pa.get_device_info_by_host_api_device_index(0, i).get('maxInputChannels')) > 0:
-            print "Input Device id ", i, " - ", pa.get_device_info_by_host_api_device_index(0, i).get('name')
-            
-# Initialize microphone 1
-stream1 = pa.open(format = pyaudio.paInt16,
-    channels = 1,
-    rate = 48000,
-    input = True,
-    frames_per_buffer = 128,
-    input_device_index = 2) # input_device_index specifies the device number of the microphone
-
-# Initialize microphone 2
-stream2 = pa.open(format = pyaudio.paInt16,
-    channels = 1,
-    rate = 48000,
-    input = True,
-    frames_per_buffer = 128,
-    input_device_index = 3) # input_device_index specifies the device number of the microphone
+# Load required include files (Imports, Database, GPIO, etc.)
+import includes.imports.py
+import includes.database.py
+import includes.gpio.py
+import includes.pyaudio.py
 
 # Fetch dB values from the Mysql database
 mycursor = mydb.cursor()
