@@ -1,8 +1,7 @@
-# Load all the files (Imports, Database, GPIO, etc.)
-
-from modules.database import *
-from modules.gpio import *
-from modules.microphone import *
+# Load all the modules (Database, GPIO, Microphone)
+from modules.database import * # Imports the database settings and the fetched values
+from modules.gpio import * # Imports the GPIO settings and the functions
+from modules.microphone import * # Imports the microphone settings and the functions
 
 # Prints the name and the values of the loaded profile
 print ("Loaded profile information:\nName: " + profilename + "\ndB min: " + str(dbmin) + "\ndB max: " + str(
