@@ -8,7 +8,7 @@
     {
         $checkresult = mysql_query("SELECT * FROM profiles WHERE name = '".$_POST['profilename']."'");
         $num_rows = mysql_num_rows($checkresult);
-        if($checkresult>0)
+        if($num_rows>0)
         {
             echo '<script language="javascript">';
             echo 'alert("Profile already exists!")';
