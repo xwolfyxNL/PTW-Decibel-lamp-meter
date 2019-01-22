@@ -1,13 +1,16 @@
 
+
+
 <?php
-    include $_SERVER['DOCUMENT_ROOT'].'/modules/database.php' // Load the database module
+    include 'modules/database.php'; // Load the database module
 ?>
 <?php
     // insert into database and reload page
     if(isset($_POST['save']))
     {
-        $checkresult = mysql_query("SELECT * FROM profiles WHERE name = '".$_POST['profilename']."'");
-        $num_rows = mysql_num_rows($checkresult);
+	//$sql
+        $checkresult = mysqli_query($conn, "SELECT * FROM profiles WHERE name = '".$_POST['profilename']."'");
+        $num_rows = mysqli_num_rows($checkresult);
         if($num_rows>0)
         {
             echo '<script language="javascript">';
@@ -16,11 +19,11 @@
         }
         else
         {
-      	    $sql0 = "INSERT INTO profiles (name, minimum, maximum);
+      	    $sql0 = "INSERT INTO profiles (name, minimum, maximum)
       	    VALUES ('".$_POST["profilename"]."','".$_POST["minimum"]."','".$_POST["maximum"]."')";
      	    $result = mysqli_query($conn,$sql0);
-	        header("Refresh:0");
-	    }
+	    header("Refresh:0");
+	}
     }
     //delete from database and reload page
     if(isset($_POST['delete']) && $_POST['profiles'] != 'current' && $_POST['profiles'] != 'default')
@@ -52,8 +55,9 @@
 
 		//define options in drop down menu;
 		<?php
-		$column = 'name';
-		include SERVER['DOCUMENT_ROOT'].'/modules/dropdown.php' # Load the module dropdown
+		
+		
+		include 'modules/dropdown.php'; # Load the module dropdown
 		?>
 	</select>
 	<input type = "submit" name = "delete" value = "Delete profile"/> <br>
