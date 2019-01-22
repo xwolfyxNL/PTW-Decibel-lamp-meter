@@ -1,6 +1,8 @@
 
 <?php
-    //initialize database
+    /**Initializes database with the name 'lampapplication' and the table profiles and puts the information
+    *of the database in a variable.
+    */
     $conn = mysqli_connect("localhost","root","","lampapplication"); // Database connection settings
     $table = "profiles"; // Table name of the database
     if(!$conn)
