@@ -53,7 +53,7 @@
 		//define options in drop down menu;
 		<?php
 		$column = 'name';
-		include SERVER['DOCUMENT_ROOT'].'/modules/dropdown.php'
+		include SERVER['DOCUMENT_ROOT'].'/modules/dropdown.php' # Load the module dropdown
 		?>
 	</select>
 	<input type = "submit" name = "delete" value = "Delete profile"/> <br>
