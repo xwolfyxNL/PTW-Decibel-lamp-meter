@@ -1,11 +1,12 @@
 
 <?php
     //initialize database
-    $conn = mysqli_connect("localhost","root","",$database);
+    $conn = mysqli_connect("localhost","root","","lampapplication"); // Database connection settings
+    $table = "profiles"; // Table name of the database
     if(!$conn)
     {
-        die("Connection failed: " . mysqli_connect_error());
+        die("Connection failed: " . mysqli_connect_error()); // If the application can't connect to the database output an error
     }
-    $sql = "SELECT * FROM ".$table;
-    $result = $conn -> query($sql);
+    $sql = "SELECT * FROM ".$table; // Select all the data from the table provided above
+    $result = $conn -> query($sql); // Put the result of the query in a variable
 ?>

@@ -1,11 +1,9 @@
 
 <?php
-    $database = "lampapplication";
-    $table = "profiles";
-    include $_SERVER['DOCUMENT_ROOT'].'/modules/database.php'
+    include $_SERVER['DOCUMENT_ROOT'].'/modules/database.php' // Load the database module
 ?>
 <?php
-    //insert into database and reload page
+    // insert into database and reload page
     if(isset($_POST['save']))
     {
         $checkresult = mysql_query("SELECT * FROM profiles WHERE name = '".$_POST['profilename']."'");
