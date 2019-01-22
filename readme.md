@@ -1,4 +1,4 @@
-# PTW decibel reactive lamp
+# PTW feedback lamp
 This project was made as a PTW school project. 
 
 The project uses two microphones to calculate a realtime average decibel. This decibel values is used to control three lights (green, yellow and red). Green indicates a proper dB level, yellow indicates that it's too loud and red indicates that the sound is way too loud.
