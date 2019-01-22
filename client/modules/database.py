@@ -1,3 +1,6 @@
+""""This module connects to the database and fetches the required profile from the MySQL database.
+This profile gets stored in three variables."""
+
 # Imports
 import mysql.connector
 

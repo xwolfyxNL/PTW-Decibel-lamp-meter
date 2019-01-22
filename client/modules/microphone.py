@@ -1,3 +1,7 @@
+""""This module setups and intializes the connected microphones.
+After it's initialised it starts recording on both the microphones and calculates both the RMS trough a decibel formula.
+These values will be stored in a temporary list that after a certain interval returns the average decibel"""
+
 # Imports
 import time
 import os

@@ -1,3 +1,7 @@
+""""This module setups and initializes the GPIO pins that will be used for connecting the lights.
+After the initialization the GPIO pins get turned off in case they were already on.
+It also contains three functions for controlling the individual lights"""
+
 # Imports
 import RPi.GPIO as GPIO
 
