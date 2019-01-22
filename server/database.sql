@@ -10,7 +10,7 @@ CREATE TABLE `profiles` (
 );
 
 INSERT INTO `profiles` (`id`, `name`, `minimum`, `maximum`) VALUES
-(1, 'current', 60, 100),
+(1, 'current', 50, 70),
 (2, 'default', 50, 70);
 
 ALTER TABLE `profiles`
