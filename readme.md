@@ -60,4 +60,4 @@ The database.sql needs to be imported in to the database server and the database
 
 The database.sql contains the database structure and some default profiles.
 
-##### Credits: Stefan, Max, Dorien, Thijs, Lucas
+##### Credits: Stefan, Max, Dorien, Thijs, Lucas - V1M / PTW Groep 1
