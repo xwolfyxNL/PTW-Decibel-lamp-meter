@@ -7,16 +7,16 @@ These values that trigger the certain lights can be controlled from a web panel.
 
 #### Software dependencies:
 
-##### Server:
-- MySQL server
-- PHP
-- Apache
-
 ##### Client:
 - MySQL client
 - PyAudio
 - Numpy
 - Audioop
+
+##### Server:
+- MySQL server
+- PHP
+- Apache
 
 #### Hardware dependencies:
 - 2 raspberry pi's
