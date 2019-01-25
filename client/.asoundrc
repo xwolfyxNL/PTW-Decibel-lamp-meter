@@ -5,6 +5,8 @@
 # different memory locations, so JACK will complain that it
 # cannot get mmap-based access. see below.
 
+# Credits: https://raspberrypi.stackexchange.com/questions/58170/multiple-microphones
+
 pcm.multi {
         type multi;
         slaves.a.pcm "hw:0,0";
