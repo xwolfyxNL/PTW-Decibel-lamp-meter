@@ -23,6 +23,9 @@ These values that trigger the certain lights can be controlled from a web panel.
 - 1 switch
 - 3 UTP cables
 - 2 microphones (USB connections as they need to have a sound card build in)
+- 3 led's (Green, Yellow and Red)
+- 3 resistors (1k Ω)
+- 1 breadboard
 
 GPIO pins: (this can be changed in the: /client/modules/gpio.py
 - Red led = 3
