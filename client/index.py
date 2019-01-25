@@ -4,7 +4,7 @@ from modules.gpio import * # Import the GPIO settings and the functions
 from modules.microphone import * # Import the microphone settings and the functions
 
 # Prints the name and the values of the loaded profile
-print ("Loaded profile information:\nName: " + profilename + "\ndB min: " + str(dbmin) + "\ndB max: " + str(
+print ("Loaded profile information:\ndB min: " + str(dbmin) + "\ndB max: " + str(
     dbmax) + "\n")
 
 """ This section controls the lights. It fetches the measured dB's and sets a green light if the measured dB's are
