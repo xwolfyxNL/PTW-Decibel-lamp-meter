@@ -12,8 +12,8 @@ CREATE TABLE `profiles` (
 INSERT INTO `profiles` (`id`, `name`, `minimum`, `maximum`) VALUES
 (1, 'current', 50, 70),
 (2, 'default', 50, 70),
-(3, 'stil', 40, 60),
-(4, 'druk', 55, 75);
+(3, 'quiet', 40, 60),
+(4, 'busy', 55, 75);
 
 ALTER TABLE `profiles`
   ADD PRIMARY KEY (`id`);
